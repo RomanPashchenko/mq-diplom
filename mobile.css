@@ -1,0 +1,421 @@
+/* mobile css */
+.wrapper {
+  min-width: unset;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.copypasta {
+  padding: 0;
+}
+
+.header-burger {
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 16px;
+}
+
+.header-burger > span,
+.header-burger::before,
+.header-burger::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.header-burger::before,
+.header-burger::after {
+  content: '';
+  display: block;
+}
+
+.header-burger::before {
+  top: 0;
+}
+
+.header-burger > span {
+  top: 8px;
+}
+
+.header-burger::after {
+  top: 16px;
+}
+
+.header-burger.open-menu span {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.header-burger.open-menu:before {
+  transform: rotate(45deg);
+  transition: 0.3s;
+  top: 10px;
+}
+
+.header-burger.open-menu:after {
+  transform: rotate(-45deg);
+  transition: 0.3s;
+  top: 10px;
+}
+
+#navi.show-nav {
+  left: 0;
+}
+
+@media (max-width:768px) {
+  body {
+    min-width: unset;
+  }
+  html,body {
+    min-width: unset;
+  }
+  .content_wrapper {
+    padding: 10px 0;
+    flex-grow: 1;
+    border-top: none;
+  }
+  .content_wrapper > div {
+    width: 100%;
+    margin: 0 auto;
+    min-width: unset;
+    max-width: unset;
+  }
+  .wrapper {
+    min-width: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 2%;
+    max-width: none;
+    width: 92%;
+    height: 50px;
+  }
+  .header_h1 {
+    display: none;
+  }
+  .header-burger {
+    display: block;
+  }
+  #navi {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: -120%;
+    transition: 0.3s;
+  }
+  #navi li {
+    padding: 20px;
+  }
+  #nav li:last-child {
+    border-bottom: 1px solid #333;
+  }
+  #navi li.active {
+    top: 0;
+    padding: 20px;
+  }
+  #navi li a {
+    font-size: 20px;
+  }
+  .header > div > p {
+    display: none;
+  }
+  #closeadmpanel {
+    position: relative;
+    padding: 5px;
+  }
+  #avatar {
+    margin: 0;
+    width: 45px;
+    height: 45px;
+    font-size: none;
+    border: none;
+    position: relative;
+  }
+  #avatar img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #closeadmpanel {
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #closeadmpanel > p > span {
+    display: none;
+  }
+  div.ay {
+    min-height: unset;
+    margin: 15px;
+    padding: 15px;
+  }
+  div.ay h1 {
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    line-height: 1;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  div.ay img {
+    display: none;
+  }
+  div.vpncont {
+    width: 100%;
+    border-top: none;
+    border-radius: 0px 5px 5px 5px;
+  }
+  #isotoped {
+    padding: 0;
+  }
+  div.pcinfo svg.fa-desktop {
+    position: static;
+  }
+  div.pcinfo div.circle {
+    position: static;
+  }
+  div.pcinfo {
+    width: 100%;
+    height: unset;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  div.pcinfo>h3 {
+    margin: 0;
+  }
+  .pcactions {
+    display: none;
+  }
+  .pcaction > svg {
+    margin-top: 0;
+  }
+  .pcinfo > .tooltip {
+    padding: 0;
+    top: 20px;
+    right: 20px;
+  }
+  .dropdown-actions {
+    z-index: 3;
+    transform: scale(1);
+    position: static;
+    opacity: 1 !important;
+    border-radius: 3px;
+    min-width: unset;
+  }
+  div.vpncont {
+    padding: 15px;
+    margin: 0;
+  }
+  .vpncont > active > p {
+    text-align: center;
+  } 
+  .vpnremote {
+    margin-top: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    margin-bottom: -3px;
+  }
+  .vpnremote li {
+    flex-basis: 50%;
+    white-space: unset;
+    padding: 20px 10px;
+    text-align: center;
+    z-index: 2;
+  }
+   .vpnremote li.active {
+    top: 0;
+    padding: 20px 10px;
+    text-align: center;
+    border: 1px solid #999;
+    z-index: 2;
+  }
+  .forvpnsteps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 20px auto 30px;
+  }
+  .forvpnsteps > span {
+    padding: 10px;
+  }
+  div.modalcont2 {
+    min-width: unset;
+    padding: 20px;
+  }
+  div.modalcont2.thous {
+    min-width: unset;
+    max-width: unset;
+  }
+  .autoreplywrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  div.calevent {
+    margin: 0;
+    padding: 5px;
+  }
+  .ineedmodalplz.justblock {
+    margin: 0;
+  }
+  .autoreplywrapper.ecal {
+    padding: 5px;
+  }
+  div.modalcloser {
+    padding: 0;
+  }
+  div.usercard {
+    width: 100%;
+    margin: 0;
+  }
+  .footer {
+    position: relative;
+    height: unset;
+  }
+  .footer > div {
+    width: unset;
+    min-width: unset;
+    max-width: unset;
+    padding: 0;
+    margin: 0;
+    text-align: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.hbuttons {
+    position: static;
+  }
+  div.hbuttons .ineedmodalplz {
+    padding: 0;
+  }
+  .ineedmodalplz {
+    margin: 0;
+  }
+}
+
+@media (max-width:602px) {
+  .content_wrapper {
+    padding: 0;
+  }
+  div.ay h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  div.pcinfo > h3 {
+    white-space: pre-line;
+  }
+  div.pcinfo {
+    padding: 10px;
+  }
+  .ineedmodalplz.ema {
+    width: 100%;
+  }
+  #navi li {
+    padding: 10px;
+    white-space: pre-wrap;
+  }
+  #navi li.active {
+    padding: 10px;
+  }
+  .filter > span > span {
+    display: none;
+  }
+  .filter > span:nth-child(n + 3) > svg:not(:first-child) {
+    display: none;    
+  }
+  .forvpnsteps {
+    padding: 0;
+  }
+  .forvpnsteps > span {
+    text-align: center;
+    flex-basis: 25%;
+  }
+  .forvpnsteps > span:last-child {
+    padding-right: 10px;
+    border-radius: 0 10px 10px 0;
+  }
+  .forvpnsteps > span:first-child {
+    padding-left: 10px;
+    border-radius: 10px 0 0 10px;
+  }
+  div.vpncont {
+    padding: 10px;
+  }
+  .isotoped.allreadyiso {
+    display: flex;
+    flex-direction: column;
+    height: unset !important;
+  }
+  .step {
+    position: relative !important;
+    float: unset !important;
+    margin: 0;
+  }
+  .step.link.yellow.win.w30,
+  .step.w50.dit.informe {
+    position: relative !important;
+    top: 0 !important;
+  }
+  .step.tooltiped {
+    left: 0 !important;
+    top: 0 !important;
+  }
+  .w30,
+  .w50 {
+    width: unset !important;
+  }
+  div.calevent {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  a.dwlds {
+    padding: 10px;
+  }
+  div.usercard>div.icon {
+    position: static;
+  }
+  div.usercard {
+    padding-left: none;
+    padding: 10px;
+  }
+  div.usercard > div.icon {
+    width: unset;
+  }
+  div.ava {
+    position: static;
+    margin: 0 auto 15px;
+  }
+  div.usercard h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
